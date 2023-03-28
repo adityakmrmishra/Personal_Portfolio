@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,300;0,400;0,600;1,700&family=Roboto+Mono:wght@200&family=Roboto+Slab:wght@100;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* css for header */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    /* border:1px solid; */
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #00635a;
+    right: -10%;
+    transform:skew(20deg);
+    z-index: -1;
+}
+
+header .header_box{
+    position: relative;
+    width: 70%;
+    height: 100%;
+    /* border: 1px solid; */
+    transition:.3s linear;
+    margin:auto;
+}
+
+header .header_box nav{
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid; */
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+}
+header .header_box nav .logo{
+    font-size:20px;
+}
+header .header_box nav .logo span{
+
+    color:#07978b;
+}
+header .header_box nav .menu{
+    position: relative;
+    display:flex;
+    align-items:center;
+}
+
+header .header_box nav .menu #menu_btn{
+    font-size:20px;
+    color:#fff;
+    display:none;
+}
+
+
+header .header_box nav .menu ul{
+    list-style-type:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+header .header_box nav .menu ul li{
+    position: relative;
+    margin-left:25px;
+    padding:4px 0px;
+}
+
+header .header_box nav .menu ul li a{
+    text-decoration:none;
+    color:white;
+    font-size: 14px;
+    transition:.3s linear;
+}
+
+header .header_box nav .menu ul li a:hover{
+    color:rgb(255,255,255,.7);
+}
+
+header .header_box nav .menu ul li span{
+   position: absolute;
+   bottom: 0;
+   background:white;
+   width:0%;
+   height: 2px;
+   border-radius:50px;
+   transition: .3s linear;
+}
+
+header .header_box nav .menu ul li:hover span:nth-child(1){
+   width: 70%;
+}
+
+header .header_box nav .menu ul li span:nth-child(2){
+    width:0%; 
+    left: 75%;
+}
+
+header .header_box nav .menu ul li:hover span:nth-child(2){
+    width: 10%;
+}
+
+header .header_box nav .menu ul li span:nth-child(3){
+    width:0%; 
+    left: 90%;
+}
+
+header .header_box nav .menu ul li:hover span:nth-child(3){
+    width: 10%;
+}
+
+header .header_box .content{
+    width: 100%;
+    height: 90%;
+    /* border: 1px solid ; */
+    display:flex;
+}
+
+header .header_box .content .cont_box , .img_box{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid; */
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction:column;
+}
+
+header .header_box .content .cont_box h5{
+    color:#00635a;
+    font: size 20px;
+    letter-spacing:2px;
+}
+header .header_box .content .cont_box h1{
+    font-size: 40px;
+    margin: 5px 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header .header_box .content .cont_box h6{
+    font-size: 14px;
+    letter-spacing: 1.7px;
+    margin-top: 3px;
+    font-weight:600;
+}
+
+header .header_box .content .cont_box button{
+    padding:7px 20px;
+    border: 2px solid #00635a;
+    margin-top: 15px;
+    background:#00635a;
+    border-radius:5px;
+    cursor: pointer;
+    transition:.3s linear;
+}
+
+header .header_box .content .cont_box button:hover{
+    background:transparent;
+    color:#00635a;
+}
+
+header .header_box .content .img_box{
+   justify-content:flex-end;
+}
+
+header .header_box .content .img_box img{
+   width: 275px;
+   height: 380px;
+   margin-left: 10%;
+}
+
+header .header_box .weather{
+    position: absolute;
+    width: 100px;
+    height: 90%;
+    /* border: 1px solid; */
+    right: 0;
+    bottom: 10px;
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+header .header_box .weather .card{
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid; */
+    margin-top: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+header .header_box .weather .card img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+header .header_box .weather .card p{
+    font-size:11px;
+    color:white;
+}
+
+header .header_box .weather .card h6{
+    font-size:11px;
+    color:white;
+    font-weight:bold;
+    line-height:20px;
+}
+
+header .header_box .weather .card:nth-child(1) img{
+    width: 35px;
+}
+
+header .header_box .weather .card:nth-child(3) img{
+    animation: fan 2s linear infinite;
+}
+
+@keyframes fan {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* css for skill box */
+
+.skill_box {
+    width: 70%;
+    height: 350px;
+    /* border: 1px solid; */
+    margin: auto;
+    display: flex;
+    margin-top: 60px;
+}
+
+.skill_box .skill_img_box , .skill_cont_box{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid; */
+}
+
+.skill_box .skill_img_box img{
+    width: 86%;
+    height: 100%;
+}
+
+.skill_box .skill_cont_box h6{
+    color:#00635a;
+    font-size:13px;
+    margin-top:20px;
+}
+
+.skill_box .skill_cont_box h2{
+    position: relative;
+    font-family: 'Robato', sans-serif;
+    font-weight:600;
+}
+
+.skill_box .skill_cont_box h2 span{
+    width:30px;
+    height: 3px;
+    background:#00635a;
+    position: absolute;
+    bottom:-10px;
+    left:0%;
+    border-radius:20px;
+}
+.skill_box .skill_cont_box h2 span:nth-child(2){
+    width:5px;
+    height: 3px;
+    background:#00635a;
+    position: absolute;
+    bottom:-10px;
+    left:6%;
+    border-radius:20px;
+}
+
+.skill_box .skill_cont_box h2 span:nth-child(3){
+    width:5px;
+    height: 3px;
+    background:#00635a;
+    position: absolute;
+    bottom:-10px;
+    left:7.5%;
+    border-radius:20px;
+}
+
+
+.skill_box .skill_cont_box p{
+    font-size:14px;
+    word-break:break-all;
+    margin-top:25px;
+}
+
+.skill_box .skill_cont_box .skill_progress_bar{
+    width: 100%;
+    /* border: 1px solid; */
+    margin-top:15px;
+}
+
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box{
+    margin-top:15px;
+}
+
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box .lable{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box .lable h6{
+    color:black;
+    font-size:13px;
+    font-weight:600;
+    margin-top: 0;
+}
+
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box h5{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    margin-top: 2px;
+}
+
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box h5::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgb(184,184,184,.5);
+    border-radius:20px;
+    z-index: -1;
+}
+
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box h5::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#00635a;
+    border-radius:20px;
+    z-index: -1;
+}
+
+
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box:nth-child(1) .ani_jss:after{
+    animation:ani_jsl1 3s linear forwards;
+}
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box:nth-child(2) .ani_jss:after{
+    animation:ani_jsl2 3s linear forwards;
+}
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box:nth-child(3) .ani_jsss:after{
+    animation:ani_jsl3 3s linear forwards;
+}
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box:nth-child(4) .ani_jsss:after{
+    animation:ani_jsl4 3s linear forwards;
+}
+
+
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box:nth-child(1) .ani_jsss:after{
+    animation:ani_js21 3s linear forwards;
+}
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box:nth-child(2) .ani_jsss:after{
+    animation:ani_js22 3s linear forwards;
+}
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box:nth-child(3) .ani_jss:after{
+    animation:ani_js23 3s linear forwards;
+}
+.skill_box .skill_cont_box .skill_progress_bar .skill_progress_bar_box:nth-child(4) .ani_jss:after{
+    animation:ani_js24 3s linear forwards;
+}
+
+@keyframes ani_jsl1 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes ani_jsl2 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes ani_jsl3 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+@keyframes ani_jsl4 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+
+@keyframes ani_js21 {
+    0%{
+        width: 95%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+@keyframes ani_js22 {
+    0%{
+        width: 85%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+@keyframes ani_js23 {
+    0%{
+        width: 75%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+@keyframes ani_js24 {
+    0%{
+        width: 75%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+
+.project{
+    width:70%;
+    height:auto;
+    /* border:1px solid; */
+    margin:auto;
+    margin-top :60px;
+}
+
+
+.project .head{
+    width:100%;
+    height:20%;
+    /* border:1px solid; */
+    margin-top :20px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    /* flex-direction:column; */
+}
+
+.project .head .l_bx{
+    height: 100%;
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-end;
+    flex-direction:column;
+    /* border: 1px solid; */
+}
+
+.project .head .l_bx  h6{
+    color:#00635a;
+    font-size: 12px;
+}
+
+.project .head .l_bx .spans{
+    display:flex;
+    align-items:center;
+}
+
+.project .head .l_bx .spans span{
+    width: 30px;
+    height: 2.5px;
+    background:#00635a;
+}
+.project .head .l_bx .spans span:nth-child(2){
+    width: 5px;
+    margin-left:5px;
+}
+
+.project .head .l_bx .spans span:nth-child(3){
+    width: 5px;
+    margin-left:5px;
+}
+
+.project .head .r_bx {
+    height: 100%;
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+}
+
+.project .head .r_bx .bi{
+    margin-top :50px;
+}
+.project .cards{
+    width: 100%;
+    height: auto;
+    display:flex;
+    align-items:center;
+    margin-top: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.project .cards::-webkit-scrollbar{
+    display: none;
+    cursor: pointer;
+}
+
+.project .cards .card{
+    min-width: 350px;
+    height: 250px;
+    /* border: 1px solid; */
+    margin-right: 5px;
+}
+
+.project .cards .card:nth-last-child(1){
+    margin-right: 0px;
+}
+
+.project .cards .card img{
+    width: 100%;
+    height:80%;
+    border-radius: 5px;
+}
+
+.project .cards .card .cont p{
+    font: size 12px;
+}
+
+
+
+footer{
+    width: 100%;
+    height: auto;
+    padding:flex;
+    border-top: 2px solid grey ;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    margin-top:60px;
+    background:#00635a;
+}
+
+footer h6{
+    color:#000;
+}
+
+footer h6 span{
+    color:rgb(130,130,130);
+}
+
+footer .social{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 10px;
+}
+
+footer .social a{
+    color:rgba(49,49,49);
+    margin:0px 5px;
+    transition:.3s linear;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+footer .social a:hover{
+    color:#00635a;
+}
+
+footer .social a .bi{
+    padding:7px 10px;
+    background:rgb(184,184,184,.5);
+    border-radius:50%;
+    font-size:14px;
+}
+
+footer h4{
+    margin-top:5px;
+}
+
+footer ul{
+    list-style-type:none;
+    display:flex;
+    align-items:center;
+    margin-top: 10px;
+}
+
+footer ul li{
+    margin-right: 10px;
+}
+
+footer ul li a{
+    text-decoration:none;
+    font-size:13px;
+    color:rgb(130,130,130);
+    transition:.3s linear;
+}
+footer ul li a:hover{
+    color:#000;
+}
